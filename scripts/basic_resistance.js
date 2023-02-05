@@ -20,7 +20,6 @@ function addInput() {
 * The calculation process is not working yet.
 
 function calculate(operation) {
-  var result = parseFloat(document.getElementById("input1").value) || 0;
   for (var i = 1; i < inputCount; i++) {
     var value = parseFloat(document.getElementById("input" + i).value) || 0;
   }
