@@ -16,7 +16,8 @@ function addInput() {
 
 * We need to create a function that will calculate differently when more than 2 input boxes are being used.
 
-* The for loop below is being used to count through the array of new input boxes. It just don't work yet.
+* The for loop below is being used to count through the array of new input boxes.
+* The calculation process is not working yet.
 
 function calculate(operation) {
   var result = parseFloat(document.getElementById("input1").value) || 0;
