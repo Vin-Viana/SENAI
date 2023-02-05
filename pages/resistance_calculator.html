@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <title>Calculador de Resistência</title>
+
+    <body>
+      <nav>
+        <ul>
+          <li><strong>Senai Toolkit</strong></li>
+        </ul>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+
+      <main class="container">
+        <h3>Calculador de Resistência</h3>
+
+        <form>
+          <input type="text" id="input-1" name="input-1" />
+          <input type="text" id="input-2" name="input-2" />
+        </form>
+
+        <div id="inputsContainer"></div>
+        <button role="button" class="contrast outline" onclick="addInput()">
+          Add Resistor
+        </button>
+
+        <button role="button" class="outline" onclick="calculate('Series')">
+          Série
+        </button>
+
+        <button role="button" class="outline" onclick="calculate('Parallel')">
+          Paralelo
+        </button>
+
+        <p id="result"></p>
+      </main>
+      <script src="../scripts/basic_resistance.js"></script>
+    </body>
+  </body>
+</html>
