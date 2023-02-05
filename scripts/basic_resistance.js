@@ -3,6 +3,8 @@
 /*
  * addInput() creates a new input box when the button is pressed
  */
+
+var inputCount = 1;
 function addInput() {
   var inputsContainer = document.getElementById("inputsEntries");
   var newInput = document.createElement("inputAdditional");
