@@ -22,8 +22,8 @@ function calculate(operation) {
     // will be used later to get the lastest result without looping it
     let resultArray = [];
 
-    // will start from 3 because there's already 2 inputs (the default ones)
-    for (var i = 3; i < inputCount; i++) {
+    // will start from 1 because there's already 2 inputs (the default ones) to be counted in
+    for (var i = 1; i < inputCount; i++) {
       var value = parseFloat(document.getElementById("input-" + i).value) || 0;
 
       switch (operation) {
