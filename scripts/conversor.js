@@ -1,6 +1,7 @@
 //Conversor: Octal to Decimal
 
 let octal = [37246];
+//To separate the numbers
 let dOctal = [...(octal + "")];
 let results2 = 0;
 dOctal.reverse();
