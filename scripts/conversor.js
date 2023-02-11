@@ -12,7 +12,25 @@ function calculate(operation) {
       break;
 
     case "Octa":
-      //Still in progress
+      let deci = parseFloat(input1);
+      let deciDiv = 0;
+      let remTotal = [];
+      let deciResul = [];
+
+      while (deci >= 8) {
+        deciDiv = deci;
+        deci /= 8;
+        deciDiv %= 8;
+        deciResul.push(Math.trunc(deci));
+        remTotal.push(Math.trunc(deciDiv));
+      }
+
+      let octInfo = deciResul.slice(-1);
+      remTotal.push(...octInfo);
+      remTotal.reverse();
+      let oDeci = parseInt(remTotal.toString().replaceAll(",", ""));
+      document.getElementById("result").innerHTML = `${oDeci} Octal`;
+
       break;
 
     case "Decimal":
