@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <title>Conversor de Sistemas (Binário, Octal, Decimal e Hexadecimal)</title>
+
+    <body>
+      <nav>
+        <ul>
+          <li><strong>Senai Toolkit</strong></li>
+        </ul>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+
+      <main class="container">
+        <h3>Conversor de Sistemas</h3>
+
+        <form>
+          <input type="number" id="input-1" />
+        </form>
+
+        <div id="inputsEntries"></div>
+        <button role="button" class="outline" onclick="calculate('Binary')">
+          Binário
+        </button>
+
+        <button role="button" class="outline" onclick="calculate('Octa')">
+          Octal
+        </button>
+
+        <button role="button" class="outline" onclick="calculate('Decimal')">
+          Decimal
+        </button>
+
+        <button
+          role="button"
+          class="outline"
+          onclick="calculate('Hexadecimal')"
+        >
+          Hexadecimal
+        </button>
+
+        <p id="result"></p>
+      </main>
+      <script src="../scripts/conversor.js"></script>
+    </body>
+  </body>
+</html>
