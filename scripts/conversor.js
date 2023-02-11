@@ -1,4 +1,4 @@
-//Conversor: Octal to Decimal
+//Conversor
 
 const zeroValue = (document.getElementById("result").innerHTML = `0`);
 
@@ -8,7 +8,25 @@ function calculate(operation) {
 
   switch (operation) {
     case "Binary":
-      //Still in progress
+      let deciBin = parseFloat(input1);
+      let binDiv = 0;
+      let remBinTotal = [];
+      let binResul = [];
+
+      while (deciBin >= 2) {
+        binDiv = deciBin;
+        deciBin /= 2;
+        binDiv %= 2;
+        binResul.push(Math.trunc(deciBin));
+        remBinTotal.push(Math.trunc(binDiv));
+      }
+
+      let binInfo = binResul.slice(-1);
+      remBinTotal.push(...binInfo);
+      remBinTotal.reverse();
+      let bDeci = parseInt(remBinTotal.toString().replaceAll(",", ""));
+      document.getElementById("result").innerHTML = `${bDeci} Binary`;
+
       break;
 
     case "Octa":
