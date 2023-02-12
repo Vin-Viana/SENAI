@@ -52,18 +52,40 @@ function calculate(operation) {
       break;
 
     case "Decimal":
-      let octal = parseFloat(input1);
-      let dOctal = [...(octal + "")];
-      let results2 = 0;
-      dOctal.reverse();
+      function containsNumbers(str) {
+        return /[2-9]/.test(str);
+      }
 
-      for (let [ind, value] of dOctal.entries()) {
-        let calcElevate = value * 8 ** ind;
-        results2 += calcElevate;
-        resultArray.push(results2);
-        document.getElementById("result").innerHTML = `${
-          resultArray[resultArray.length - 1]
-        } Decimal`;
+      let infoBD = containsNumbers(parseFloat(input1));
+
+      if (infoBD == true) {
+        let octal = parseFloat(input1);
+        let dOctal = [...(octal + "")];
+        let results2 = 0;
+        dOctal.reverse();
+
+        for (let [ind, value] of dOctal.entries()) {
+          let calcElevate = value * 8 ** ind;
+          results2 += calcElevate;
+          resultArray.push(results2);
+          document.getElementById("result").innerHTML = `${
+            resultArray[resultArray.length - 1]
+          } Decimal`;
+        }
+      } else {
+        let binValue = parseFloat(input1);
+        let dBin = [...(binValue + "")];
+        let resulBin = 0;
+        dBin.reverse();
+
+        for (let [ind, value] of dBin.entries()) {
+          let calcElevate = value * 2 ** ind;
+          resulBin += calcElevate;
+          resultArray.push(resulBin);
+          document.getElementById("result").innerHTML = `${
+            resultArray[resultArray.length - 1]
+          } Decimal`;
+        }
       }
       break;
 
